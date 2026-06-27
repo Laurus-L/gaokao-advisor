@@ -457,6 +457,7 @@ body{
   <div class="nav-inner">
     <button class="nav-link active" data-target="hubei">🏠 省内院校</button>
     <button class="nav-link" data-target="shengwai">🌏 省外院校</button>
+    <button class="nav-link" data-target="jiangzhe">🌊 江浙院校</button>
     <button class="nav-link" data-target="aviation">✈️ 航空院校</button>
     <button class="nav-link" data-target="summary">📊 志愿策略</button>
   </div>
@@ -495,13 +496,33 @@ body{
   </div>
 
   <div class="tier-tabs fade-in delay-1">
-    <button class="tier-tab active" data-tier="all">全部 <span class="count">34</span></button>
-    <button class="tier-tab" data-tier="chong">🔥 冲 <span class="count">6</span></button>
-    <button class="tier-tab" data-tier="wen">✅ 稳 <span class="count">15</span></button>
+    <button class="tier-tab active" data-tier="all">全部 <span class="count">30</span></button>
+    <button class="tier-tab" data-tier="chong">🔥 冲 <span class="count">4</span></button>
+    <button class="tier-tab" data-tier="wen">✅ 稳 <span class="count">13</span></button>
     <button class="tier-tab" data-tier="bao">🛡 保 <span class="count">13</span></button>
   </div>
 
   <div class="school-grid" id="shengwaiGrid">
+    <!-- Schools injected by JS -->
+  </div>
+</section>
+
+<!-- ===== JIANGZHE SECTION ===== -->
+<section class="section" id="jiangzhe">
+  <div class="section-header fade-in">
+    <span class="eyebrow">Jiangsu & Zhejiang</span>
+    <h2>🌊 江苏 · 浙江院校</h2>
+    <p class="sub">按位次排序 · 普通类招生</p>
+  </div>
+
+  <div class="tier-tabs fade-in delay-1">
+    <button class="tier-tab active" data-tier="all">全部 <span class="count">6</span></button>
+    <button class="tier-tab" data-tier="chong">🔥 冲 <span class="count">2</span></button>
+    <button class="tier-tab" data-tier="wen">✅ 稳 <span class="count">3</span></button>
+    <button class="tier-tab" data-tier="bao">🛡 保 <span class="count">1</span></button>
+  </div>
+
+  <div class="school-grid" id="jiangzheGrid">
     <!-- Schools injected by JS -->
   </div>
 </section>
@@ -686,14 +707,6 @@ const schools_hubei = [
 
 const schools_shengwai = [
   {
-    name:'南京工业大学', tier:'wen', badges:['双非强校','南京'], rank:27123,
-    desc:'化工全国第3，材料/安全工程全国顶尖，南京区位优势明显（2025数据）',
-    majors:[
-      {name:'04组（物化）· 化工/材料/安全', rank:'27,123', strong:true},
-    ],
-    advice:'2025年04组27,123位次和你27,263几乎匹配！化工全国第3，南京就业好。去年是冲，今年变稳了。'
-  },
-  {
     name:'内蒙古大学（211）', tier:'chong', badges:['211','呼和浩特'], rank:23725,
     desc:'211大学，分数亲民，机械/交通运输/计算机有特色（2025数据）',
     majors:[
@@ -745,15 +758,6 @@ const schools_shengwai = [
       {name:'02/03组 · 工科专业', rank:'~40,042'},
     ],
     advice:'211保底首选。你的位次27k上石河子大学的所有专业都非常稳妥。'
-  },
-  {
-    name:'浙江工业大学', tier:'chong', badges:['省属工科第一','杭州'], rank:22609,
-    desc:'浙江省属工科No.1，化工全国前20，机械/计算机实力强（2025数据，位次上升）',
-    majors:[
-      {name:'03组（物化）· 材料/安全/土木', rank:'22,609', strong:true},
-      {name:'02组（不限）· 管理科学', rank:'16,516'},
-    ],
-    advice:'2025年位次从26,991上升到22,609，竞争加剧。03组差4.6k可冲。杭州区位依然好但需注意位次变化。'
   },
   {
     name:'燕山大学', tier:'chong', badges:['机械强校','秦皇岛'], rank:24832,
@@ -891,25 +895,6 @@ const schools_shengwai = [
     advice:'48k位次保底。橡胶/化工材料是其传统王牌，青岛城市环境好。'
   },
   {
-    name:'江苏科技大学', tier:'chong', badges:['船舶特色','镇江'], rank:27591,
-    desc:'船舶与海洋工程全国前10，原船舶工业部直属，行业特色鲜明',
-    majors:[
-      {name:'06组（物化）· 船舶海洋/计算机/人工智能', rank:'27,591', strong:true},
-      {name:'04组（物化）· 机械类/电子信息/能源动力', rank:'28,901'},
-      {name:'02组（不限）· 工科方向', rank:'31,969'},
-    ],
-    advice:'06组27,591和你仅差328位，压线匹配！船舶海洋工程是王牌，全国船舶行业认可度极高。非土木方向，行业特色独一无二。'
-  },
-  {
-    name:'浙江理工大学', tier:'wen', badges:['杭州工科'], rank:30080,
-    desc:'杭州市属工科院校，纺织科学与工程全国领先，机械/计算机实力均衡',
-    majors:[
-      {name:'03组（物化）· 机械/电子/计算机', rank:'30,080'},
-      {name:'02组（不限）· 工科方向', rank:'30,713'},
-    ],
-    advice:'30k位次稳妥可上。杭州互联网/制造业就业机会多，纺织工程全国领先但非土木方向，机械/计算机也可选。'
-  },
-  {
     name:'华东交通大学', tier:'wen', badges:['交通特色','南昌'], rank:31969,
     desc:'原铁道部直属，轨道交通/机械/电气为特色，铁路系统校招重点',
     majors:[
@@ -984,6 +969,45 @@ const schools_shengwai = [
       {name:'01组（不限）· 水利/工科方向', rank:'50,295'},
     ],
     advice:'50k位次保底。水利水电工程是其王牌，原水利部直属，水利系统就业认可度高。'
+  },
+];
+
+const schools_jiangzhe = [
+  {
+    name:'南京工业大学', tier:'wen', badges:['化工强校','南京'], rank:27123,
+    desc:'化工全国第3，材料/安全工程全国顶尖，南京区位优势明显（2025）',
+    majors:[{name:'04组（物化）· 化工/材料/安全', rank:'27,123', strong:true}],
+    advice:'2025年04组27,123位次和你27,263几乎匹配！南京就业好，化工全国第3。'
+  },
+  {
+    name:'江苏科技大学', tier:'wen', badges:['船舶特色','镇江'], rank:30847,
+    desc:'船舶与海洋工程全国前10，原船舶工业部直属（2025数据）',
+    majors:[{name:'02组（不限）· 船舶海洋/计算机/AI', rank:'30,847', strong:true}],
+    advice:'2025年02组30,847位次，你27k稳上。船舶海洋工程是其王牌。'
+  },
+  {
+    name:'浙江工业大学', tier:'chong', badges:['省属工科第一','杭州'], rank:22609,
+    desc:'浙江省属工科No.1，化工全国前20（2025数据，位次上升）',
+    majors:[{name:'03组（物化）· 材料/安全/土木', rank:'22,609', strong:true}],
+    advice:'2025年位次上升，03组差4.6k可冲。杭州区位好但竞争加剧。'
+  },
+  {
+    name:'浙江理工大学', tier:'wen', badges:['杭州工科'], rank:30080,
+    desc:'杭州市属工科院校，纺织科学与工程全国领先（2025）',
+    majors:[{name:'03组（物化）· 机械/电子/计算机', rank:'30,080'}],
+    advice:'30k位次稳妥可上。杭州就业机会多。'
+  },
+  {
+    name:'扬州大学', tier:'wen', badges:['扬州'], rank:30847,
+    desc:'江苏省属综合性大学，工科实力均衡（2025数据）',
+    majors:[{name:'06组（物化）· 农学/环境', rank:'30,847'}],
+    advice:'30,847位次你完全稳上。计算机/电气热门专业偏高，进校后分专业。'
+  },
+  {
+    name:'常州大学', tier:'bao', badges:['常州'], rank:41438,
+    desc:'化工/材料为特色，计算机性价比高（2024数据）',
+    majors:[{name:'03组（物化）· 计算机/软件/电子', rank:'41,438'}],
+    advice:'41k位次完全保底。常州靠近苏锡常经济圈。'
   },
 ];
 
@@ -1085,6 +1109,7 @@ document.addEventListener('DOMContentLoaded', function() {
   try {
     document.getElementById('hubeiGrid').innerHTML = schools_hubei.map(renderSchool).join('');
     document.getElementById('shengwaiGrid').innerHTML = schools_shengwai.map(renderSchool).join('');
+    document.getElementById('jiangzheGrid').innerHTML = schools_jiangzhe.map(renderSchool).join('');
     document.getElementById('aviationGrid').innerHTML = schools_aviation.map(renderSchool).join('');
   } catch(e) {
     document.getElementById('hubeiGrid').innerHTML = '<div style="padding:20px;color:#C73E3A">⚠️ 数据加载异常，请刷新重试</div>';
@@ -1102,36 +1127,4 @@ document.querySelectorAll('.tier-tab').forEach(tab => {
       if(tier === 'all' || card.dataset.tier === tier) {
         card.style.display = '';
       } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-});
-
-// ===== NAV SCROLL =====
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', function(){
-    const target = document.getElementById(this.dataset.target);
-    if(target) {
-      const nav = document.getElementById('pageNav');
-      const offset = nav.offsetHeight;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset - 8;
-      window.scrollTo({top, behavior:'smooth'});
-    }
-  });
-});
-
-// Update active nav on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-      document.querySelector(`.nav-link[data-target="${entry.target.id}"]`)?.classList.add('active');
-    }
-  });
-}, {threshold:0.2, rootMargin:'-80px 0px 0px 0px'});
-document.querySelectorAll('.section').forEach(s => observer.observe(s));
-</script>
-
-</body>
-</html>
+        card.style.d
