@@ -1063,9 +1063,9 @@ function renderSchool(s){
         <div style="font-size:13px;color:var(--text-secondary);margin-top:4px">${s.desc}</div>
       </div>
       <div class="school-rank">
-        最低位次 <span class="rank-val">${s.rank.toLocaleString()}</span><br>
+        最低位次 <span class="rank-val">${Number(s.rank).toLocaleString()}</span><br>
         ${tierLabel(s.tier)}
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px">差距 ${Math.abs(YOUR_RANK - s.rank).toLocaleString()}</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:4px">差距 ${Math.abs(YOUR_RANK - Number(s.rank)).toLocaleString()}</div>
       </div>
       <div class="school-detail">
         <div class="detail-col">
@@ -1081,9 +1081,15 @@ function renderSchool(s){
   `;
 }
 
-document.getElementById('hubeiGrid').innerHTML = schools_hubei.map(renderSchool).join('');
-document.getElementById('shengwaiGrid').innerHTML = schools_shengwai.map(renderSchool).join('');
-document.getElementById('aviationGrid').innerHTML = schools_aviation.map(renderSchool).join('');
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    document.getElementById('hubeiGrid').innerHTML = schools_hubei.map(renderSchool).join('');
+    document.getElementById('shengwaiGrid').innerHTML = schools_shengwai.map(renderSchool).join('');
+    document.getElementById('aviationGrid').innerHTML = schools_aviation.map(renderSchool).join('');
+  } catch(e) {
+    document.getElementById('hubeiGrid').innerHTML = '<div style="padding:20px;color:#C73E3A">⚠️ 数据加载异常，请刷新重试</div>';
+  }
+});
 
 // ===== TIER FILTER =====
 document.querySelectorAll('.tier-tab').forEach(tab => {
