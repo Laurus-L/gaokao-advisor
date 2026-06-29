@@ -516,10 +516,10 @@ body{
   </div>
 
   <div class="tier-tabs fade-in delay-1">
-    <button class="tier-tab active" data-tier="all">全部 <span class="count">6</span></button>
-    <button class="tier-tab" data-tier="chong">🔥 冲 <span class="count">2</span></button>
-    <button class="tier-tab" data-tier="wen">✅ 稳 <span class="count">3</span></button>
-    <button class="tier-tab" data-tier="bao">🛡 保 <span class="count">1</span></button>
+    <button class="tier-tab active" data-tier="all">全部 <span class="count">9</span></button>
+    <button class="tier-tab" data-tier="chong">🔥 冲 <span class="count">1</span></button>
+    <button class="tier-tab" data-tier="wen">✅ 稳 <span class="count">5</span></button>
+    <button class="tier-tab" data-tier="bao">🛡 保 <span class="count">3</span></button>
   </div>
 
   <div class="school-grid" id="jiangzheGrid">
@@ -975,39 +975,83 @@ const schools_shengwai = [
 const schools_jiangzhe = [
   {
     name:'南京工业大学', tier:'wen', badges:['化工强校','南京'], rank:27123,
-    desc:'化工全国第3，材料/安全工程全国顶尖，南京区位优势明显（2025）',
-    majors:[{name:'04组（物化）· 化工/材料/安全', rank:'27,123', strong:true}],
-    advice:'2025年04组27,123位次和你27,263几乎匹配！南京就业好，化工全国第3。'
+    desc:'化工全国第3🏆，材料/安全工程全国顶尖，南京区位好（2025）',
+    majors:[
+      {name:'04组（物化）· 🧪 化工/材料/安全工程', rank:'27,123', strong:true},
+      {name:'04组（物化）· 制药/生物/能源', rank:'27,123'},
+    ],
+    advice:'2025年04组27,123位次和你几乎匹配！化工全国第3，南京就业好。进校后分专业，化工是绝对王牌。'
   },
   {
     name:'江苏科技大学', tier:'wen', badges:['船舶特色','镇江'], rank:30847,
-    desc:'船舶与海洋工程全国前10，原船舶工业部直属（2025数据）',
-    majors:[{name:'02组（不限）· 船舶海洋/计算机/AI', rank:'30,847', strong:true}],
-    advice:'2025年02组30,847位次，你27k稳上。船舶海洋工程是其王牌。'
+    desc:'船舶与海洋工程全国前10🚢，原船舶工业部直属（2025）',
+    majors:[
+      {name:'02组（不限）· 🚢 船舶与海洋工程', rank:'30,847', strong:true},
+      {name:'02组（不限）· 计算机/人工智能/水声工程', rank:'30,847'},
+    ],
+    advice:'船舶海洋工程是其王牌，全国船舶行业认可度极高。水声工程583分/22k是高分专业但偏军事。'
   },
   {
     name:'浙江工业大学', tier:'chong', badges:['省属工科第一','杭州'], rank:22609,
-    desc:'浙江省属工科No.1，化工全国前20（2025数据，位次上升）',
-    majors:[{name:'03组（物化）· 材料/安全/土木', rank:'22,609', strong:true}],
-    advice:'2025年位次上升，03组差4.6k可冲。杭州区位好但竞争加剧。'
+    desc:'浙江省属工科No.1🏆，化工全国前20，机械/计算机实力强（2025位次上升）',
+    majors:[
+      {name:'03组（物化）· 🧪 材料/安全工程/土木', rank:'22,609', strong:true},
+      {name:'03组（物化）· 智能建造/物理', rank:'22,609'},
+    ],
+    advice:'2025年位次从26,991上升到22,609，差4.6k可冲。化工/机械是传统王牌，杭州互联网就业好但竞争加剧。'
   },
   {
     name:'浙江理工大学', tier:'wen', badges:['杭州工科'], rank:30080,
-    desc:'杭州市属工科院校，纺织科学与工程全国领先（2025）',
-    majors:[{name:'03组（物化）· 机械/电子/计算机', rank:'30,080'}],
-    advice:'30k位次稳妥可上。杭州就业机会多。'
+    desc:'杭州市属工科院校，纺织科学与工程全国领先🏆，机械/计算机可（2025）',
+    majors:[
+      {name:'03组（物化）· ⚙️ 机械/电子/计算机', rank:'30,080'},
+    ],
+    advice:'30k位次稳妥可上。杭州就业机会多，纺织工程全国领先但非土木方向。'
   },
   {
     name:'扬州大学', tier:'wen', badges:['扬州'], rank:30847,
-    desc:'江苏省属综合性大学，工科实力均衡（2025数据）',
-    majors:[{name:'06组（物化）· 农学/环境', rank:'30,847'}],
-    advice:'30,847位次你完全稳上。计算机/电气热门专业偏高，进校后分专业。'
+    desc:'江苏省属综合性大学，机械/车辆/电气实力均衡（2025）',
+    majors:[
+      {name:'06组（物化）· 🌾 农学/环境/生物', rank:'30,847'},
+      {name:'05组（物化）· 💻 计算机/电气/机械（热门）', rank:'20,410'},
+    ],
+    advice:'06组30,847位次你完全稳上。计算机/电气等热门在05组20k偏高，进校后看成绩。'
   },
   {
     name:'常州大学', tier:'bao', badges:['常州'], rank:41438,
-    desc:'化工/材料为特色，计算机性价比高（2024数据）',
-    majors:[{name:'03组（物化）· 计算机/软件/电子', rank:'41,438'}],
-    advice:'41k位次完全保底。常州靠近苏锡常经济圈。'
+    desc:'化工/材料为特色，计算机/软件性价比高，苏锡常经济圈（2024）',
+    majors:[
+      {name:'03组（物化）· 💻 计算机/软件工程', rank:'41,438'},
+      {name:'03组（物化）· 电子/智能制造/消防', rank:'41,438'},
+    ],
+    advice:'41k位次完全保底。计算机/软件工程33k左右更热门，对你来说无压力。'
+  },
+  {
+    name:'江苏大学', tier:'wen', badges:['工科强校','镇江'], rank:27123,
+    desc:'工科强校🏆，机械工程/车辆工程/能源与动力为传统王牌（2025完美匹配）',
+    majors:[
+      {name:'02组（物化）· ⚙️ 机械/车辆/能源与动力', rank:'27,123', strong:true},
+      {name:'02组（物化）· 材料/交通/食品/临床医学', rank:'27,123'},
+    ],
+    advice:'2025年02组27,123位次和你零差距！机械/车辆是传统王牌（全国B+），电气/计算机需20k以内偏高但进校可争取。强烈推荐！'
+  },
+  {
+    name:'南京工程学院', tier:'bao', badges:['南京'], rank:42868,
+    desc:'应用型工科院校，电气工程（电力系统）王牌⚡，原电力部隶属（2025）',
+    majors:[
+      {name:'03组（物化）· ⚙️ 机械类/车辆/智能制造', rank:'42,868'},
+      {name:'03组（物化）· ⚡ 电气工程（王牌，偏高）', rank:'33,488'},
+    ],
+    advice:'42k位次保底。电气工程(电力系统)565/33k是其王牌，进校后可争取。南京区位好。'
+  },
+  {
+    name:'苏州科技大学', tier:'bao', badges:['苏州'], rank:37675,
+    desc:'苏州区位好，电子信息/环境科学为特色，苏州工业园区就业优势大（2025）',
+    majors:[
+      {name:'04组（物化）· 📡 电子信息/环境/化工', rank:'37,675'},
+      {name:'03组（不限）· 建筑/应用心理', rank:'39,091'},
+    ],
+    advice:'37k位次你完全稳上。苏州工业园区外资企业密集，电子信息类专业就业机会多。'
   },
 ];
 
@@ -1117,44 +1161,4 @@ try {
 // ===== TIER FILTER =====
 document.querySelectorAll('.tier-tab').forEach(tab => {
   tab.addEventListener('click', function(){
-    const container = this.closest('.section').querySelector('.school-grid');
-    const tier = this.dataset.tier;
-    this.parentElement.querySelectorAll('.tier-tab').forEach(t => t.classList.remove('active'));
-    this.classList.add('active');
-    container.querySelectorAll('.school-card').forEach(card => {
-      if(tier === 'all' || card.dataset.tier === tier) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-});
-
-// ===== NAV SCROLL =====
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', function(){
-    const target = document.getElementById(this.dataset.target);
-    if(target) {
-      const nav = document.getElementById('pageNav');
-      const offset = nav.offsetHeight;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset - 8;
-      window.scrollTo({top, behavior:'smooth'});
-    }
-  });
-});
-
-// Update active nav on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-      document.querySelector(`.nav-link[data-target="${entry.target.id}"]`)?.classList.add('active');
-    }
-  });
-}, {threshold:0.2, rootMargin:'-80px 0px 0px 0px'});
-document.querySelectorAll('.section').forEach(s => observer.observe(s));
-</script>
-
-</body>
-</html>
+    const container = this.closest
